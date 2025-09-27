@@ -1,0 +1,26 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 2.0
+margin_bottom = 4.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 461.0
+margin_top = 271.0
+margin_right = 575.0
+margin_bottom = 285.0
+text = "Key or Life"
+align = 1
+uppercase = true
+percent_visible = 1.11111
+
+[node name="Button" type="Button" parent="."]
+margin_left = 468.0
+margin_top = 294.0
+margin_right = 568.0
+margin_bottom = 332.0
+text = "PLAY"
