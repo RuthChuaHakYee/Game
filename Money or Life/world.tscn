@@ -1,0 +1,207 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Screenshot_2025-09-27_at_16.05.13-removebg-preview.png" type="Texture" id=2]
+[ext_resource path="res://zombie_cheer1.png" type="Texture" id=3]
+[ext_resource path="res://Comp.tres" type="TileSet" id=4]
+[ext_resource path="res://pixel-art-uni-sushi-iconpixel-art-gold-coin-icon-png.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 23, 28.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.125, 15.5625 )
+
+[sub_resource type="CircleShape2D" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 2.5, 2.5 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 15, 15 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 65536, 0, 0, 65563, 0, 0, 131072, 0, 0, 131099, 0, 0, 196608, 0, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 4, 0, 196615, 4, 0, 196616, 4, 0, 196617, 4, 0, 196618, 4, 0, 196619, 4, 0, 196620, 4, 0, 196621, 4, 0, 196622, 4, 0, 196623, 4, 0, 196624, 4, 0, 196625, 4, 0, 196626, 4, 0, 196627, 4, 0, 196628, 4, 0, 196629, 4, 0, 196630, 4, 0, 196635, 0, 0, 262144, 0, 0, 262168, 4, 0, 262169, 4, 0, 262170, 4, 0, 262171, 0, 0, 327680, 0, 0, 327707, 0, 0, 393216, 0, 0, 393240, 4, 0, 393241, 4, 0, 393242, 4, 0, 393243, 0, 0, 458752, 0, 0, 458779, 0, 0, 524288, 0, 0, 524301, 4, 0, 524302, 4, 0, 524303, 4, 0, 524304, 4, 0, 524305, 4, 0, 524306, 4, 0, 524307, 4, 0, 524308, 4, 0, 524309, 4, 0, 524310, 4, 0, 524311, 4, 0, 524312, 4, 0, 524313, 4, 0, 524314, 4, 0, 524315, 0, 0, 589824, 0, 0, 589851, 0, 0, 655360, 0, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655387, 0, 0, 720896, 0, 0, 720923, 0, 0, 786432, 0, 0, 786437, 4, 0, 786438, 4, 0, 786439, 4, 0, 786459, 0, 0, 851968, 0, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851995, 0, 0, 917504, 0, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917531, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 983063, 0, 0, 983064, 0, 0, 983065, 0, 0, 983066, 0, 0, 983067, 0, 0 )
+
+[node name="Next level" type="Area2D" parent="."]
+position = Vector2( 76, 18 )
+
+[node name="Sprite" type="Sprite" parent="Next level"]
+position = Vector2( 20.875, 65.125 )
+scale = Vector2( 0.138286, 0.115065 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Next level"]
+position = Vector2( 21.875, 66.125 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="Next level"]
+margin_left = 1.0
+margin_top = 44.0
+margin_right = 43.0
+margin_bottom = 64.0
+text = "Next"
+
+[node name="enemy" type="Area2D" parent="."]
+position = Vector2( 117, -354 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemy"]
+position = Vector2( 272, 448 )
+scale = Vector2( 0.3, 0.354545 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2( 272.125, 451.562 )
+shape = SubResource( 1 )
+
+[node name="enemy5" type="Area2D" parent="."]
+position = Vector2( 123, -92 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemy5"]
+position = Vector2( 272, 448 )
+scale = Vector2( 0.3, 0.354545 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy5"]
+position = Vector2( 272.125, 451.562 )
+shape = SubResource( 1 )
+
+[node name="enemy3" type="Area2D" parent="."]
+position = Vector2( 278, -355 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemy3"]
+position = Vector2( 272, 448 )
+scale = Vector2( 0.3, 0.354545 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy3"]
+position = Vector2( 272.125, 451.562 )
+shape = SubResource( 1 )
+
+[node name="enemy4" type="Area2D" parent="."]
+position = Vector2( 425, -354 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemy4"]
+position = Vector2( 272, 448 )
+scale = Vector2( 0.3, 0.354545 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy4"]
+position = Vector2( 272.125, 451.562 )
+shape = SubResource( 1 )
+
+[node name="enemy2" type="Area2D" parent="."]
+position = Vector2( -37, -355 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="enemy2"]
+position = Vector2( 272, 448 )
+scale = Vector2( 0.3, 0.354545 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy2"]
+position = Vector2( 272, 451 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -16, 435 )
+scale = Vector2( 0.338, 0.338 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 235, 104 )
+scale = Vector2( 0.0399999, 0.0337499 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 235, 103 )
+shape = SubResource( 3 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 155, -5 )
+
+[node name="Sprite" type="Sprite" parent="Area2D2"]
+position = Vector2( 235, 104 )
+scale = Vector2( 0.0399999, 0.0337499 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 235, 103 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( 317, -7 )
+
+[node name="Sprite" type="Sprite" parent="Area2D3"]
+position = Vector2( 235, 104 )
+scale = Vector2( 0.0399999, 0.0337499 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 235, 103 )
+shape = SubResource( 3 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2( 157, 256 )
+
+[node name="Sprite" type="Sprite" parent="Area2D5"]
+position = Vector2( 235, 104 )
+scale = Vector2( 0.0399999, 0.0337499 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2( 235, 103 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Area2D5"]
+margin_left = 125.0
+margin_top = 11.0
+margin_right = 294.0
+margin_bottom = 25.0
+text = "Sacrifices must be made..."
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2( 462, -3 )
+
+[node name="Sprite" type="Sprite" parent="Area2D4"]
+position = Vector2( 235, 104 )
+scale = Vector2( 0.0399999, 0.0337499 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 235, 103 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 345.0
+margin_top = 46.0
+margin_right = 521.0
+margin_bottom = 60.0
+text = "Sacrifice money for safety :)"
+
+[connection signal="body_shape_entered" from="enemy" to="KinematicBody2D" method="_on_enemy_body_shape_entered"]
+[connection signal="body_shape_entered" from="enemy5" to="KinematicBody2D" method="_on_enemy_body_shape_entered"]
+[connection signal="body_shape_entered" from="enemy3" to="KinematicBody2D" method="_on_enemy_body_shape_entered"]
+[connection signal="body_shape_entered" from="enemy4" to="KinematicBody2D" method="_on_enemy_body_shape_entered"]
+[connection signal="body_shape_entered" from="enemy2" to="KinematicBody2D" method="_on_enemy_body_shape_entered"]

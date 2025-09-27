@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Screenshot_2025-09-27_at_16.05.13-removebg-preview.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23, 28.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Next level" type="Area2D" parent="."]
+position = Vector2( 50, 19 )
+
+[node name="Sprite" type="Sprite" parent="Next level"]
+position = Vector2( 20.875, 65.125 )
+scale = Vector2( 0.138286, 0.115065 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Next level"]
+position = Vector2( 21.875, 66.125 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
